@@ -1,0 +1,163 @@
+.article {
+  position: relative;
+  background-color: white;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  border-bottom: rgba($colorGrey, 0.3) solid 1px;
+}
+
+.article__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.article__video {
+  padding-top: 30px;
+}
+
+.article__inner {
+  margin: 0 auto;
+  padding: 50px 0;
+  width: 700px;
+  max-width: 90%;
+}
+
+.article__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article__inform {
+  display: flex;
+  width: max-content;
+  height: max-content;
+}
+
+.article__data {
+  &::after {
+    content: '/';
+    padding-left: 15px;
+    color: $colorGrey;
+  }
+}
+
+.article__num-comment {
+  padding-left: 15px;
+}
+
+.article__inform_color {
+  color: $colorGrey;
+  &:hover {
+    color: $colorDark;
+  }
+}
+
+.article__title {
+  width: 700px;
+  max-width: 90%;
+  height: max-content;
+  padding-top: 20px;
+
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  &:hover {
+    color: $colorGold;
+  }
+}
+
+.article__line {
+  width: 80px;
+  margin-top: 20px;
+  border: $colorGold 1px solid;
+}
+
+.article__content {
+  margin-top: 25px;
+  font-size: 1.5rem;
+  p:not(:last-child) {
+    padding-bottom: 20px;
+  }
+}
+
+.article__read-more {
+  display: flex;
+  margin-top: 20px;
+  width: 140px;
+  height: 40px;
+
+  text-justify: center;
+  text-align: center;
+  font-size: 1.2rem;
+  color: $colorGold;
+
+  border: $colorGold solid 2px;
+  &:hover {
+    background-color: $colorGold;
+    color: #ffffff;
+  }
+  a {
+    margin: auto;
+    color: inherit;
+  }
+}
+
+.swiper-container {
+  height: 100%;
+  width: 100%;
+}
+.swiper-slide {
+  width: 101%;
+  height: max-content;
+}
+
+.swiper-button-next {
+  height: 50px;
+  width: 50px;
+  background-color: $colorDark;
+  right: 0;
+  color: white;
+  &:hover {
+    background-color: $colorGold;
+  }
+}
+
+.swiper-button-prev {
+  height: 50px;
+  width: 50px;
+  background-color: $colorDark;
+  left: 0;
+  color: white;
+  &:hover {
+    background-color: $colorGold;
+  }
+}
+
+.article__wraper-img {
+  float: right;
+  max-width: 50%;
+  height: 300px;
+  margin-right: -100px;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+}
+
+.article__img-in-text {
+  width: auto;
+  height: calc(300px - 2rem);
+  object-fit: cover;
+
+  object-position: center;
+}
+
+.img-caption {
+  padding-top: 10px;
+  color: $colorGrey;
+  font-size: 0.9rem;
+  text-align: center;
+}
