@@ -1,16 +1,13 @@
 .wraper {
-  z-index: 1;
   width: 1300px;
   max-width: 90%;
   margin: 3% auto 0;
   background-color: #ffffff;
 }
-header {
-  z-index: 2;
-}
+
 .header {
   position: relative;
-  z-index: 3;
+
   box-sizing: border-box;
   height: 20vh;
   padding: 50px;
@@ -100,7 +97,8 @@ header {
 }
 
 .navigation {
-  z-index: 4;
+  display: flex;
+  overflow: hidden;
   position: relative;
   height: 0vh;
   width: 100%;
@@ -108,6 +106,7 @@ header {
 }
 .navigation__menu-cont {
   display: flex;
+  margin: auto 0;
 }
 .navigation__main-menu {
   display: flex;
@@ -145,20 +144,98 @@ header {
 
 @keyframes an-menu-open {
   0% {
-    height: 0vh;
+    height: 0;
   }
 
   100% {
-    height: 8vh;
+    height: 70px;
   }
 }
 
 @keyframes an-menu-close {
   0% {
-    height: 8vh;
+    height: 70px;
   }
 
   100% {
-    height: 0vh;
+    height: 0vw;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .header {
+    height: 15vh;
+    padding: 30px;
+  }
+
+  .social-menu {
+    display: none;
+  }
+
+  .header__titles {
+    order: -1;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .header__nav-dis {
+    width: auto;
+  }
+  .header__discription {
+    display: none;
+  }
+  .navigation__main-menu {
+    flex-direction: column;
+    padding-left: 0;
+  }
+  .navigation__menu-item:not(:first-child)::before {
+    content: none;
+  }
+
+  .menu-link {
+    padding: 10px;
+  }
+
+  @keyframes an-menu-open {
+    0% {
+      height: 0px;
+    }
+
+    100% {
+      height: 160px;
+    }
+  }
+  @keyframes an-menu-close {
+    0% {
+      height: 160px;
+    }
+
+    100% {
+      height: 0vw;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .wraper {
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header__titles {
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+  .header__title {
+    font-size: 1.5rem;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
   }
 }

@@ -5,5 +5,9 @@
 
 @import './layouts/header';
 @import './layouts/footer';
-@import './block/home-post';
-@import './block/taber';
+@import './block/post';
+@import './block/taber-post';
+@import './block/post-meta';
+@import './block/comment-form';
+@import './block/post-info';
+@import './block/post-info-author';

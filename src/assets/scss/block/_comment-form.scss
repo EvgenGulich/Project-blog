@@ -1,0 +1,71 @@
+.comment-form {
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+.comment__title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-bottom: 25px;
+}
+.comment-form__comment,
+.comment-form__author,
+.comment-form__email,
+.comment-form__website {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 25px;
+}
+.comment-form__author,
+.comment-form__email {
+  width: 45%;
+}
+
+textarea,
+input[type='text'],
+input[type='email'],
+input[type='url'] {
+  border: rgba($colorGrey, 0.3) solid 2.5px;
+  padding: 15px;
+  border-radius: 0;
+  width: 100%;
+}
+input[type='submit'] {
+  margin: 20px 0;
+  width: max-content;
+  height: 50px;
+
+  text-justify: center;
+  text-align: center;
+  font-size: 1.2rem;
+  color: $colorGold;
+  background-color: #ffffff;
+
+  border: $colorGold solid 2px;
+  &:hover {
+    background-color: $colorGold;
+    color: #ffffff;
+  }
+}
+.comment-form .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 650px) {
+  .comment-form .container {
+    flex-direction: column;
+  }
+  .comment-form__author,
+  .comment-form__email {
+    width: 100%;
+  }
+  textarea {
+    height: 150px;
+  }
+  textarea,
+  input[type='text'],
+  input[type='email'],
+  input[type='url'] {
+    padding: 5px;
+  }
+}

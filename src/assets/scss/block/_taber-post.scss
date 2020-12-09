@@ -1,0 +1,150 @@
+.tab-conteiner {
+  max-width: 700px;
+  display: flex;
+  padding-bottom: 150px;
+  padding-top: 30px;
+}
+
+.tab-content {
+  position: relative;
+  width: 70%;
+  height: 400px;
+}
+
+.tab-content__img {
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 0 5px;
+}
+
+.tab-content__discr {
+  position: absolute;
+  top: 350px;
+  left: 200px;
+  width: 500px;
+  padding: 10px;
+
+  border-radius: 2px;
+  box-shadow: 0 0 5px;
+
+  color: white;
+  font-size: 1.3rem;
+
+  background-color: rgba($colorGold, 0.5);
+}
+
+.tab-header {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-header__item {
+  padding: 5px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: $colorGrey;
+  &:hover {
+    color: $colorDark;
+  }
+}
+
+.tab-header__item.item-active {
+  font-size: 1.3rem;
+  color: $colorGold;
+  text-decoration: underline;
+  &:hover {
+    color: $colorGold;
+  }
+}
+
+.tab-content.anim-taber {
+  animation-name: anim-taber;
+  animation-duration: 1s;
+}
+
+@keyframes anim-taber {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+@media screen and (max-width: 1030px) {
+  .tab-content__discr {
+    left: 100px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .tab-conteiner {
+    padding-bottom: 200px;
+  }
+  .tab-content__discr {
+    left: 100px;
+    width: 400px;
+  }
+
+  @media screen and (max-width: 650px) {
+    .tab-conteiner {
+      flex-direction: column;
+      padding-bottom: 20px;
+    }
+    .tab-content {
+      width: 100%;
+    }
+    .tab-content__discr {
+      width: 100%;
+      height: max-content;
+      bottom: 0;
+      left: 0;
+      top: auto;
+      font-size: 1.5rem;
+    }
+    .tab-header {
+      padding-bottom: 20px;
+
+      width: 100%;
+      order: -1;
+      &__item {
+        font-size: 1.3rem;
+      }
+      &__item_active {
+        font-size: 1.6rem;
+      }
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .tab-content__discr {
+      font-size: 0.8rem;
+    }
+
+    .tab-content {
+      height: 200px;
+    }
+
+    .tab-content__img {
+      height: 200px;
+    }
+    .tab-header {
+      &__item {
+        font-size: 0.8rem;
+      }
+      &__item_active {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}

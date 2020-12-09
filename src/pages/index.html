@@ -17,8 +17,10 @@
             </div>
           </div>
           <div class="header__titles">
-            <p class="header__title">GO TO TRIP</p>
-            <p class="header__discription">Traveling With Us</p>
+            <a href="index.html">
+              <p class="header__title">GO TO TRIP</p>
+              <p class="header__discription">Traveling With Us</p></a
+            >
           </div>
           <div class="social-menu">
             <a href="">
@@ -43,7 +45,7 @@
           <div class="navigation__menu-cont">
             <ul class="navigation__main-menu">
               <li class="navigation__menu-item">
-                <a class="menu-link" href="">HOME</a>
+                <a class="menu-link" href="index.html">HOME</a>
               </li>
               <li class="navigation__menu-item">
                 <a class="menu-link" href="">ABOUT US</a>
@@ -75,13 +77,19 @@
             <div class="article__header">
               <div class="article__inform">
                 <div class="article__data">
-                  <a class="article__inform_color" href="">JULY 12, 2020</a>
+                  <a class="article__inform_color" href="post-1.html"
+                    >JULY 12, 2020</a
+                  >
                 </div>
                 <div class="article__num-comment">
-                  <a class="article__inform_color" href="">4 COMMENTS</a>
+                  <a class="article__inform_color" href="post-1.html"
+                    >0 COMMENTS</a
+                  >
                 </div>
               </div>
-              <a href=""><h2 class="article__title">A TRIP TO THE NORTH</h2></a>
+              <a href="post-1.html"
+                ><h2 class="article__title">A TRIP TO THE NORTH</h2></a
+              >
               <div class="article__line"></div>
             </div>
             <div class="article__content">
@@ -100,7 +108,9 @@
                 Kungsleden hiking trail between Abisko and Nikkaluokta.
               </p>
             </div>
-            <div class="article__read-more"><a href="">READ MORE</a></div>
+            <div class="article__read-more">
+              <a href="post-1.html">READ MORE</a>
+            </div>
           </div>
         </article>
 
@@ -109,13 +119,17 @@
             <div class="article__header">
               <div class="article__inform">
                 <div class="article__data">
-                  <a class="article__inform_color" href="">JULY 14, 2020</a>
+                  <a class="article__inform_color" href="post-2.html"
+                    >JULY 14, 2020</a
+                  >
                 </div>
                 <div class="article__num-comment">
-                  <a class="article__inform_color" href="">0 COMMENTS</a>
+                  <a class="article__inform_color" href="post-2.html"
+                    >0 COMMENTS</a
+                  >
                 </div>
               </div>
-              <a href=""
+              <a href="post-2.html"
                 ><h2 class="article__title">THE STORY OF LOVE LOCKS</h2></a
               >
               <div class="article__line"></div>
@@ -132,7 +146,9 @@
                 vandalism, and there is some cost to their removal.
               </p>
             </div>
-            <div class="article__read-more"><a href="">READ MORE</a></div>
+            <div class="article__read-more">
+              <a href="post-2.html">READ MORE</a>
+            </div>
           </div>
         </article>
 
@@ -227,13 +243,17 @@
             <div class="article__header">
               <div class="article__inform">
                 <div class="article__data">
-                  <a class="article__inform_color" href="">JULY 25, 2020</a>
+                  <a class="article__inform_color" href="post-3.html"
+                    >JULY 25, 2020</a
+                  >
                 </div>
                 <div class="article__num-comment">
-                  <a class="article__inform_color" href="">0 COMMENTS</a>
+                  <a class="article__inform_color" href="post-3.html"
+                    >0 COMMENTS</a
+                  >
                 </div>
               </div>
-              <a href=""
+              <a href="post-3.html"
                 ><h2 class="article__title">
                   THE LIFE AND WORKS OF DIETER RAMS
                 </h2></a
@@ -259,7 +279,9 @@
                 Design Officer at Braun until 1995.
               </p>
             </div>
-            <div class="article__read-more"><a href="">READ MORE</a></div>
+            <div class="article__read-more">
+              <a href="post-3.html">READ MORE</a>
+            </div>
           </div>
         </article>
 
@@ -281,15 +303,8 @@
               >
               <div class="article__line"></div>
             </div>
-            <div class="article__video">
-              <iframe
-                width="700"
-                height="350"
-                src="https://www.youtube.com/embed/TiXOQn7z9Hg"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
+            <div class="video-player">
+              <div id="player"></div>
             </div>
             <div class="article__content">
               <p>
@@ -329,7 +344,7 @@
             </div>
 
             <div class="tab-conteiner" id="taber">
-              <div class="tab-content">
+              <div class="tab-content" data-content="name">
                 <picture>
                   <source
                     media="(max-width: 400px)"
@@ -354,7 +369,7 @@
                   a fun story at your next dinner party?
                 </div>
               </div>
-              <div class="tab-content">
+              <div class="tab-content" data-content="name">
                 <picture>
                   <source
                     media="(max-width: 400px)"
@@ -378,7 +393,7 @@
                   own.
                 </div>
               </div>
-              <div class="tab-content">
+              <div class="tab-content" data-content="name">
                 <picture class="tab-content__img">
                   <source
                     media="(max-width: 400px)"
@@ -402,7 +417,7 @@
                   through the eyes of a kid?
                 </div>
               </div>
-              <div class="tab-content">
+              <div class="tab-content" data-content="name">
                 <picture>
                   <source
                     media="(max-width: 400px)"
@@ -425,7 +440,7 @@
                   and hospitality when and if you need it.
                 </div>
               </div>
-              <div class="tab-content">
+              <div class="tab-content" data-content="name">
                 <picture>
                   <source
                     media="(max-width: 400px)"
@@ -449,15 +464,24 @@
                 </div>
               </div>
               <div class="tab-header">
-                <div class="tab-header__items">
-                  <div class="tab-header__item">Enjoying vacation</div>
-                  <div class="tab-header__item">Less seriously</div>
-                  <div class="tab-header__item">Curious and humble</div>
-                  <div class="tab-header__item">Be more generous and trust</div>
-                  <div class="tab-header__item">Traveling can’t be planned</div>
+                <div class="tab-header__items" data-items>
+                  <div class="tab-header__item" data-item>
+                    Enjoying vacation
+                  </div>
+                  <div class="tab-header__item" data-item>Less seriously</div>
+                  <div class="tab-header__item" data-item>
+                    Curious and humble
+                  </div>
+                  <div class="tab-header__item" data-item>
+                    Be more generous and trust
+                  </div>
+                  <div class="tab-header__item" data-item>
+                    Traveling can’t be planned
+                  </div>
                 </div>
               </div>
             </div>
+
             <div class="article__content">
               <p>
                 What are some of your suggestions for how we can all experience
@@ -622,41 +646,56 @@
                 <div class="categories__item">
                   <div class="categories__item-caption">
                     <div class="categories__item-icons"></div>
-                    <div class="categories__item-name">sdfsdfsdfsdf</div>
+                    <div class="categories__item-name">Travel</div>
                   </div>
                   <div class="categories__inner">
-                    <p>sdfsdfsdfsdf</p>
-                    <p>sdfsdfsdfsdf</p>
+                    <ul>
+                      <li><a href="#post-1">A TRIP TO THE NORTH</a></li>
+                      <li>
+                        <a href="#post-4">ANTARCTICA - THE FROZEN CONTINENT</a>
+                      </li>
+                      <li><a href="#post-6">WHY I’M MOVING TO ITALY</a></li>
+                    </ul>
                   </div>
                 </div>
                 <div class="categories__item">
                   <div class="categories__item-caption">
                     <div class="categories__item-icons"></div>
-                    <div class="categories__item-name">sdfsdfsdfsdf</div>
+                    <div class="categories__item-name">Lifestyle</div>
                   </div>
                   <div class="categories__inner">
-                    <p>sdfsdfsdfsdf</p>
-                    <p>sdfsdfsdfsdf</p>
+                    <ul>
+                      <li><a href="#post-6">I’M MOVING TO ITALY</a></li>
+                    </ul>
                   </div>
                 </div>
                 <div class="categories__item">
                   <div class="categories__item-caption">
                     <div class="categories__item-icons"></div>
-                    <div class="categories__item-name">sdfsdfsdfsdf</div>
+                    <div class="categories__item-name">Design</div>
                   </div>
                   <div class="categories__inner">
-                    <p>sdfsdfsdfsdf</p>
-                    <p>sdfsdfsdfsdf</p>
+                    <ul>
+                      <li>
+                        <a href="#post-3">THE LIFE AND WORKS OF DIETER RAMS</a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
                 <div class="categories__item">
                   <div class="categories__item-caption">
                     <div class="categories__item-icons"></div>
-                    <div class="categories__item-name">sdfsdfsdfsdf</div>
+                    <div class="categories__item-name">Entertainment</div>
                   </div>
                   <div class="categories__inner">
-                    <p>sdfsdfsdfsdf</p>
-                    <p>sdfsdfsdfsdf</p>
+                    <ul>
+                      <li>
+                        <a href="#post-5">5 SIMPLE STEPS TO THE BEST TRAVEL</a>
+                      </li>
+                      <li><a href="#post-2">THE STORY OF LOVE LOCKS</a></li>
+                    </ul>
+                    <p></p>
+                    <p></p>
                   </div>
                 </div>
               </div>

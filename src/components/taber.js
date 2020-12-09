@@ -7,9 +7,9 @@ export class taber extends Component {
 
   constructor(element) {
     super(element);
-    this.tabs = this.element.querySelectorAll('.tab-header__item');
-    this.parentsTabs = this.element.querySelector('.tab-header__items');
-    this.tabsContent = this.element.querySelectorAll('.tab-content');
+    this.tabs = this.element.querySelectorAll('[data-item]');
+    this.parentsTabs = this.element.querySelector('[data-items]');
+    this.tabsContent = this.element.querySelectorAll('[data-content]');
     this.showTabContent = this.showTabContent.bind(this);
     this.hideTabContent = this.hideTabContent.bind(this);
   }
@@ -21,39 +21,27 @@ export class taber extends Component {
     });
 
     this.tabs.forEach((tab) => {
-      tab.classList.remove('tab-header__item_active');
+      tab.classList.remove('item-active');
     });
   }
 
   showTabContent(i) {
     this.tabsContent[i].classList.add('show', 'anim-taber');
     this.tabsContent[i].classList.remove('hide');
-    this.tabs[i].classList.add('tab-header__item_active');
+    this.tabs[i].classList.add('item-active');
   }
 
   taber() {
     this.hideTabContent();
     this.showTabContent(0);
-    this.parentsTabs.addEventListener('click', function (event) {
-      const target = event.target;
-      const tabs = document.querySelectorAll('.tab-header__item');
-      const tabsContent = document.querySelectorAll('.tab-content');
+    this.parentsTabs.addEventListener('click', (event) => {
+      const target = event.target.closest('[data-item]');
 
-      if (target && target.classList.contains('tab-header__item')) {
-        tabs.forEach((item, i) => {
+      if (target && target.hasAttribute('data-item')) {
+        this.tabs.forEach((item, i) => {
           if (target == item) {
-            tabsContent.forEach((item) => {
-              item.classList.add('hide');
-              item.classList.remove('show', 'anim-taber');
-            });
-
-            tabs.forEach((tab) => {
-              tab.classList.remove('tab-header__item_active');
-            });
-
-            tabsContent[i].classList.add('show', 'anim-taber');
-            tabsContent[i].classList.remove('hide');
-            tabs[i].classList.add('tab-header__item_active');
+            this.hideTabContent();
+            this.showTabContent(i);
           }
         });
       }
@@ -64,9 +52,3 @@ export class taber extends Component {
     this.taber();
   }
 }
-// this.tabs.forEach(function (item, i) {
-//     if (target == item) {
-//       this.hideTabContent();
-//       this.showTabContent(i);
-//     }
-//   });
