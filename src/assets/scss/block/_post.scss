@@ -77,6 +77,7 @@
   font-weight: normal;
   padding: 10px 0;
 }
+
 .article__line {
   width: 80px;
   margin-top: 20px;
@@ -88,6 +89,18 @@
   font-size: 1.3rem;
   p:not(:last-child) {
     padding-bottom: 20px;
+  }
+  li {
+    a {
+      color: inherit;
+    }
+    list-style-type: disc;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: $colorDark;
+    &:hover {
+      color: $colorGold;
+    }
   }
 }
 
@@ -120,6 +133,11 @@
 .swiper-slide {
   width: 101%;
   height: max-content;
+}
+
+.swiper__button-icon {
+  width: 30px;
+  height: 30px;
 }
 
 .swiper-button-next {
@@ -168,6 +186,7 @@
   text-align: center;
 }
 .video-player {
+  margin-top: 20px;
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -205,6 +224,15 @@
 }
 
 @media screen and (max-width: 450px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 25px;
+    height: 25px;
+  }
+  .swiper__button-icon {
+    width: 15px;
+    height: 15px;
+  }
   .article__title {
     font-size: 2rem;
   }
